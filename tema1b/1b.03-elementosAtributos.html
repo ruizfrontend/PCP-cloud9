@@ -83,19 +83,21 @@
     <h2>Formularios:</h2>
 
 	<form>
+	    
+	    <h3>Etiqueta:</h3>
 
-		<label for="text_field">Campo de texto:</label><br>
-		<input type="text" id="text_field" />
+		<label for="text_field">Soy una etiqueta asignada al siguiente campo:</label>
 		
-		<br><br>
- 
-		<label for="text_area">Área de texto:</label><br>
-		<textarea id="text_area"></textarea>
+		<h3>Input de texto:</h3>
+		<input type="text" id="text_field">
 		
-		<br><br>
- 
-		<label for="select_element">Selector:</label><br>
-    		<select name="select_element">
+		<h3>Área de texto:</h3>
+		
+		<textarea></textarea>
+		
+		<h3>Selector:</h3>
+		
+    	<select name="select_element">
     		<optgroup label="Grupo de opciones 1">
     			<option value="1">Opción 1</option>
     			<option value="2">Opción 2</option>
@@ -108,31 +110,42 @@
     		</optgroup>
 		</select>
 		
-		<br><br>
+		<h3>Botones circulares:</h3>
  
-		<label for="radio_buttons">Botones circulares:</label><br>
-			<input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
-				<input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
-				<input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+		<input type="radio" name="radio_button" value="radio_1" id="radio_1"> <label for="radio_1">Opción 1</label><br>
+		<input type="radio" name="radio_button" value="radio_2" id="radio_2"> <label for="radio_2">Opción 2</label><br>
+		<input type="radio" name="radio_button" value="radio_3" id="radio_3"> <label for="radio_3">Opción 3</label><br>
 		
+		<h3>Botones circulares:</h3>
+		
+			<input type="checkbox" name="checkboxes" value="check_1" id="check_1"> <label for="check_1">Opción 1</label><br>
+			<input type="checkbox" name="checkboxes" value="check_2" id="check_2"> <label for="check_2">Opción 2</label><br>
+			<input type="checkbox" name="checkboxes" value="check_3" id="check_3"> <label for="check_3">Opción 3</label><br>
+		
+		<h3>Password:</h3>
+		
+		<input type="password">
  
-		<p><label for="checkboxes">Checkboxes:</label><br>
-			<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Opción 1<br/>
-				<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Opción 2<br/>
-				<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Opción 3<br/>
-		</p>
+		<h3>Archivo</h3>
+		
+		<input type="file">
  
-		<p><label for="password">Password:</label><br>
-			<input type="password" class="password" name="password" />
-		</p>
+		<h3>Botones:</h3>
  
-		<p><label for="file">Archivos:</label><br>
-			<input type="file" class="file" name="file" />
-		</p>
- 
- 
-		<p><input class="button" type="reset" value="Limpiar" /> <input class="button" type="submit" value="Enviar" />
-		</p>
+		<input class="button" type="reset" value="Limpiar">
+		<input class="button" type="submit" value="Enviar">
+		
+		<h2>Nuevos inputs HTML5:</h2>
+		
+		<p>HTML5 incluye muchos más inputs más específicos y validadores. Revisalos en <a href="http://caniuse.com/#search=input">caniuse</a> antes de usar.</p>
+			
+		<h3>Input de fecha:</h3>
+		
+		<input type="date">
+	
+		<h3>Barra de progreso:</h3>
+		
+		<progress value="25" max="100">25%</progress>
  
 	</form>    
 </body>
