@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Elementos principales y atributos</title>
+</head>
+<body>
+    <h1>Ejemplos de elementos</h1>
+    
+    <h2>Elementos de párrafo</h2>
+    
+    <p>Párrafo con <strong>negritas</strong>, <em>destacados</em>, <a href="/" target="_blank" title="Título del link">Link</a>, <small>small</small>. Un salto de línea<br>Una línea horizontal<hr>, <img src="./logo.png" alt="Texto alternativo"></img></p>
+    
+    <blockquote>Una cita</blockquote>
+    
+    <p>Para poder usar caracteres de html así: &lt;&gt; necesitamos <a href="http://www.freeformatter.com/html-entities.html">entidades html</a></p>
+    
+    <p>Disponemos de cabeceras h1 hasta h6, que definen una segunda estructura del contenidos: <a href="https://gsnedders.html5.org/outliner/">outline</a></p>
+     
+    <h2 id="list_types">Listas</h2>
+     
+    <h3>Lista desordenada</h3>
+    <ul>
+    	<li>Elemento 1</li>
+    	<li>Elemento 2</li>
+    	<li>Elemento 3</li>
+    </ul>
+     
+    <h3>Lista ordenada</h3>
+    <ol>
+    	<li>Elemento 1</li>
+    	<li>Elemento 2</li>
+    	<li>Elemento 3</li>
+    </ol>
+    
+    <h3>Lista de definiciones</h3>
+    <dl>
+    	<dt>Título</dt>
+    	<dd>Definición.</dd>
+    </dl>
+    
+    <h2>Tablas</h2>
+    
+    <table style="width:100%">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th> 
+        <th>Edad</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td> 
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td> 
+        <td>94</td>
+      </tr>
+    </table>
+    
+    <h2>Multimedia:</h2>
+    
+    <h3>Video:</h3>
+    <video controls>
+        <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+        Texto si el video no se carga o no es soportado
+    </video>
+     
+    <h3>Audio:</h3>
+     
+    <audio controls>
+         <source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        <source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    
+    <h2>Iframes:</h2>
+    
+    <iframe src="https://sede.mineco.gob.es/portal/site/sede/" frameborder="0"></iframe>
+    
+    <h2>Formularios:</h2>
+
+	<form>
+
+		<label for="text_field">Campo de texto:</label><br>
+		<input type="text" id="text_field" />
+		
+		<br><br>
+ 
+		<label for="text_area">Área de texto:</label><br>
+		<textarea id="text_area"></textarea>
+		
+		<br><br>
+ 
+		<label for="select_element">Selector:</label><br>
+    		<select name="select_element">
+    		<optgroup label="Grupo de opciones 1">
+    			<option value="1">Opción 1</option>
+    			<option value="2">Opción 2</option>
+    			<option value="3">Opción 3</option>
+    		</optgroup>
+    		<optgroup label="Grupo de opciones 2">
+    			<option value="1">Opción 1</option>
+    			<option value="2">Opción 2</option>
+    			<option value="3">Opción 3</option>
+    		</optgroup>
+		</select>
+		
+		<br><br>
+ 
+		<label for="radio_buttons">Botones circulares:</label><br>
+			<input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
+				<input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
+				<input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+		
+ 
+		<p><label for="checkboxes">Checkboxes:</label><br>
+			<input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Opción 1<br/>
+				<input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Opción 2<br/>
+				<input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Opción 3<br/>
+		</p>
+ 
+		<p><label for="password">Password:</label><br>
+			<input type="password" class="password" name="password" />
+		</p>
+ 
+		<p><label for="file">Archivos:</label><br>
+			<input type="file" class="file" name="file" />
+		</p>
+ 
+ 
+		<p><input class="button" type="reset" value="Limpiar" /> <input class="button" type="submit" value="Enviar" />
+		</p>
+ 
+	</form>    
+</body>
+</html>
