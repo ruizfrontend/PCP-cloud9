@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de selectores</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <style type="text/css">
+/* selector universal: NO USAR */
+* { font-size: 1.1em; }
+
+/* apuntando a todos los elementos P */
+p { color: #f00; }
+
+/* apuntando a un id */
+#ej1 { padding: 1em; }
+
+/* apuntando a una clase */
+.elm { color: blue; }
+
+/* alguna pseudoclase */
+#ej1 .elm-2:hover { text-decoration: underline; }
+#ej1 .elm:last-child { font-weight: 900; }
+#ej1 .elm:nth-child(even) { border: 1px solid red; }
+#ej1 .elm:nth-child(2n+1) { background: yellow; }
+
+/* y pseudoelementos */
+#ej1::before { content: 'Soy un pseudoelemento, no existo en el HTML'; }
+#ej1 p::first-letter { font-size: 2em; text-transform: uppercase; }
+
+/* prueba de herencia */
+.elm { color: green; }
+
+/* mismo elementos, mayor especificidad */
+#ej1 .elm-3 { color: orange; }
+    </style>
+    
+    <p>Párrafo fuera de #ej1</p>
+    
+    <div id="ej1">
+        <p class="elm elm-1">elemento con clase elm-1</p>
+        <p class="elm elm-2">elemento con clase elm-2</p>
+        <p class="elm elm-3">elemento con clase elm-3</p>
+        <p class="elm elm-4">elemento con clase elm-4</p>
+    </div>
+    
+</body>
+</html>
