@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elementos inline y block</title>
+    <!--
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
+    
+</head>
+<body>
+    
+    <style type="text/css">
+p, div { border: 1px solid #ccc; }
+    </style>
+    
+    <p>Un párrafo es por defecto un elemento block. Crea un salto de línea antes y otro después.</p>
+    
+    <p style="max-width: 50%; vertical-align: baseline;">Lo habitual es que dentro de un párrafo todos los elementos sean inline como esta imagen: <img style="border: 1px solid #ccc;" src="http://www.adiumxtras.com/images/thumbs/dango_menu_bar_icon_set_11_19047_6240_thumb.png"></img> que se alinea siguiendo el <strong>baseline</strong> del texto: la linea imaginaria sobre la que se apoyan todas las letras., pero podemos cambiarlo mediante vertical align <img style="border: 1px solid #ccc; vertical-align: middle;" src="http://www.adiumxtras.com/images/thumbs/dango_menu_bar_icon_set_11_19047_6240_thumb.png"></img>. Esto hace que el alto de la linea en que se encuentra se ajuste al tamaño del elemento <span style="font-size: 2em;">mayor</span>.</p>
+    
+    <div>Los Elementos block como este div se comportan como cajas independientes</div>
+    <br>
+    <div style="width: 100px; float: left;">Se ajustan al tamaños de sus contenidos, pero permiten dimensionarlos</div>
+    <div style="width: 100px; float: left; height: 84px; overflow: hidden;">Y esto puede hacer que parte del contenido se salga de su caja.</div>
+    <div style="width: 100px; float: left;">Y hacer que 'floten' uno al lado del otro</div>
+
+    <p style="background: #eee">Este párrafo, al estar al lado de elementos flotantes ajusta su espacio a estos.</p>
+    
+    <p style="clear: both;">Pero en este otro, mediante clear, no permitimos que se ajuste a los elementos flotantes.</p>
+    
+</body>
+</html>
