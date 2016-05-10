@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de jQuery</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+    
+    <h1>Ejemplos de eventos</h1>
+    
+    <div id="cuadro" style="height: 10px; width: 10px; background:red; position: absolute;"></div>
+    
+    <div id="cuadro2" style="height: 100px; width: 100px; background:blue;"></div>
+    
+    <script>
+/* global $ */
+
+    // posicionamos el cuadro con el evento de movimiento del ratón
+$(document).mousemove(function(e){
+    $('#cuadro').css({ left: e.pageX, top: e.pageY});
+});
+
+    // animamos la opacidad del cuadro azul al entrar y salir el ratón
+$('#cuadro2').mouseenter(function(e){
+    $('#cuadro2').animate({opacity: 0.4}, 400);
+}).mouseout(function(e){
+    $('#cuadro2').animate({opacity: 1}, 400);
+});
+
+    </script>
+    
+</body>
+</html>

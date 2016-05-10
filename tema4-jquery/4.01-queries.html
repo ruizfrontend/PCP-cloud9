@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de jQuery</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+    
+    <h1>Ejemplos de jQuery</h1>
+    
+    <div id="ej1">
+        <p class="elm elm-1">elemento con clase elm-1</p>
+        <p class="elm elm-2">elemento con clase elm-2</p>
+        <p class="elm elm-3"><a href="http://www.unir.net/">elemento con clase elm-3</a></p>
+        <p class="elm elm-4"><a href="https://www.google.es/:">elemento con clase elm-4</a></p>
+    </div>
+    
+    <div id="output"></div>
+    
+    <script>
+/* global $ */
+
+        // algunas consultas básicas
+// $('#ej1 .elm-1').css('color', 'red');
+// $('#ej1 .elm:first-child').css('color', 'red');
+        // ojo con las comillas
+// $('#ej1 [href*="unir.net"]').css('color', 'red');
+
+        // encadenando consultas
+// $('#ej1 .elm').find('a').css('background', '#ccc')
+
+/* $('#ej1').css('background', '#ccc')
+    .find('.elm-1').css('color', 'red').end()
+    .find('.elm-2').css('color', 'orange');
+*/
+
+        // similar pero usando filtros y navegaciín por el DOM
+ /* $('#ej1')
+    .children().css('textDecoration', 'underline')
+        .not('.elm-4').css('color', 'orange')
+            .last().css('textTransform', 'uppercase'); */
+
+        // algunas acciones con los elementos
+/*$('.elm-4')
+    .addClass('ultimo')
+    .toggleClass('elm')
+    .toggleClass('elm')
+    .width(100)
+    .html();*/
+
+        // encadenando consultas
+// $('#ej1 .elm').find('a').css('background', '#ccc')
+
+        // revisando resultado de una query
+/*var $elementos = $('#ej1 .elm');
+console.log($elementos, $elementos.length);
+for (var i = $elementos.length - 1; i >= 0; i--) {
+    console.log($($elementos[i]).text());
+}*/
+
+        // o más sencillo
+/* $('#ej1 .elm').each(function(){
+    console.log($(this).text());
+}); */
+
+        // animaciones
+/*$('#ej1')
+    .width(100)
+    .animate({'width': 200}, 1000)
+    .animate({'opacity': 0.4}, 1000);
+*/
+    
+        // más animaciones
+/*$('#ej1 .elm-1').hide();
+$('#ej1 .elm-2').hide(600).delay(1000).show(600);
+$('#ej1 .elm-3').slideUp(600).delay(1000).slideDown(600);
+$('#ej1 .elm-4').fadeOut(600).delay(1000).fadeIn(600);
+*/
+
+
+    </script>
+    
+</body>
+</html>
