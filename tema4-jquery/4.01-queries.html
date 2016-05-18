@@ -25,20 +25,20 @@
 
         // algunas consultas básicas
 // $('#ej1 .elm-1').css('color', 'red');
-// $('#ej1 .elm:first-child').css('color', 'red');
+// $('#ej1 .elm').css('color', 'red');
         // ojo con las comillas
 // $('#ej1 [href*="unir.net"]').css('color', 'red');
 
         // encadenando consultas
 // $('#ej1 .elm').find('a').css('background', '#ccc')
 
-/* $('#ej1').css('background', '#ccc')
+/*$('#ej1').css('background', '#ccc')
     .find('.elm-1').css('color', 'red').end()
     .find('.elm-2').css('color', 'orange');
 */
 
         // similar pero usando filtros y navegaciín por el DOM
- /* $('#ej1')
+ /* $('/*#ej1')
     .children().css('textDecoration', 'underline')
         .not('.elm-4').css('color', 'orange')
             .last().css('textTransform', 'uppercase'); */
@@ -56,11 +56,12 @@
 
         // revisando resultado de una query
 /*var $elementos = $('#ej1 .elm');
+console.log($elementos);
 console.log($elementos, $elementos.length);
 for (var i = $elementos.length - 1; i >= 0; i--) {
     console.log($($elementos[i]).text());
-}*/
-
+}
+*/
         // o más sencillo
 /* $('#ej1 .elm').each(function(){
     console.log($(this).text());
@@ -74,11 +75,11 @@ for (var i = $elementos.length - 1; i >= 0; i--) {
 */
     
         // más animaciones
-/*$('#ej1 .elm-1').hide();
+$('#ej1 .elm-1').hide(1000);
 $('#ej1 .elm-2').hide(600).delay(1000).show(600);
 $('#ej1 .elm-3').slideUp(600).delay(1000).slideDown(600);
 $('#ej1 .elm-4').fadeOut(600).delay(1000).fadeIn(600);
-*/
+
 
 
     </script>

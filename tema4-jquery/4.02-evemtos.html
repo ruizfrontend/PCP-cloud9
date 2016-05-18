@@ -25,9 +25,9 @@ $(document).mousemove(function(e){
 
     // animamos la opacidad del cuadro azul al entrar y salir el ratón
 $('#cuadro2').mouseenter(function(e){
-    $('#cuadro2').animate({opacity: 0.4}, 400);
+    $(this).animate({opacity: 0.4}, 400);
 }).mouseout(function(e){
-    $('#cuadro2').animate({opacity: 1}, 400);
+    $(this).animate({opacity: 1}, 400);
 });
 
     </script>
