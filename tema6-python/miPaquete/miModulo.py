@@ -1,0 +1,1 @@
+CONSTANTE = 'valor constante'
