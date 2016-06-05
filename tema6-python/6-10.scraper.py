@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import requests
 import bs4
 # sudo pip install requests beautifulsoup4
@@ -13,7 +15,7 @@ soup = bs4.BeautifulSoup(response.text, "html5lib")
 
 
 # buscamos los links e imprimimos su texo y url
-links = soup.select('a')
+links = soup.select('h2')
 
 for link in links:
     print link.text, ' ', link.attrs.get('href')

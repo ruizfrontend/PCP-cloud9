@@ -1,7 +1,7 @@
 # coding=utf-8
 
 # todos los métodos de strings
-print [method for method in dir(unaString) if callable(getattr(unaString, method))]
+# print [method for method in dir(unaString) if callable(getattr(unaString, method))]
 
 miString = 'Cadena'
 
