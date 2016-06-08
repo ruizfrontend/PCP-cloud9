@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Highcharts</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+</head>
+<body>
+    <div id="graph1"></div>
+    <div id="graph2"></div>
+    
+    <script>
+
+d3.select('#graph1')
+    .selectAll('div')
+        // dibujamos div en función de los datos de un array
+    .data([4,3,2,7,5])
+    .enter()
+    .append('div')
+    .style({
+        'position': 'fixed',
+        'height': '20px',
+        'top': function(val, idx) { return 40 * idx + 'px'; },
+        'width': function(val, idx) { return val * 40 + 'px'; },
+        'background': function(val, idx) { return 'rgb(' + (val * 30) + ',255,255)'; }
+    });
+
+
+        // dibujamos div en función de los datos de un array de objetos
+var data = [{val1:4, val2: 7}, {val1:12, val2: 2}, {val1:2, val2: 5}, {val1:11, val2: 3}];
+var selection = d3.select('#graph2')
+    .selectAll('div')
+    .data(data)
+    .enter()
+    .append('div')
+    .style({
+        'position': 'fixed',
+        'height': '20px',
+        'top': function(val, idx) { return 250 + (40 * idx) + 'px'; },
+        'width': function(val, idx) { return val.val1 * 40 + 'px'; },
+        'background': function(val, idx) { return 'rgb(255,' + (val.val2 * 30) + ',255)'; }
+    });
+
+    // eliminamos un elemento y actualizamos 3 segundo después
+data.splice(1,1);
+
+setTimeout(function(){
+    d3.select('#graph2')
+        .selectAll('div')
+        .data(data)
+        .exit()
+        .style({
+            'background': 'yellow'
+        });
+}, 3000);
+
+    // ejemplos de escala
+var miEscala = d3.scale.linear()
+    .domain([0, 10])
+    .range([0,50]);
+console.log(miEscala(6));
+
+    //
+var datos = [2,5,2,3,5,11];
+var miEscala = d3.scale.linear()
+    .domain([d3.max(datos), d3.min(datos)])
+    .range([0,50]);
+console.log(miEscala(6));
+
+
+ // ejemplos de layout
+var miTarta = d3.layout.pie();
+console.log(miTarta([4,3,2,7,5]));
+
+    </script>
+</body>
+</html>
